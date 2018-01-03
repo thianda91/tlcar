@@ -12,6 +12,7 @@ public class Uusers {
 	private String uvphone;
 	private int uauthority;
 	private long ulogintimes;
+	private String uremarks;
 
 	public Uusers() {
 		super();
@@ -19,7 +20,7 @@ public class Uusers {
 
 	public Uusers(int u_uid, String uloginname, String uname, String upwd,
 			String udept, String udept2, String uoffice, String uphoneno,
-			String uvphone, int uauthority, long ulogintimes) {
+			String uvphone, int uauthority, long ulogintimes, String uremarks) {
 		super();
 		this.u_uid = u_uid;
 		this.uloginname = uloginname;
@@ -32,6 +33,7 @@ public class Uusers {
 		this.uvphone = uvphone;
 		this.uauthority = uauthority;
 		this.ulogintimes = ulogintimes;
+		this.uremarks = uremarks;
 	}
 
 	public int getU_uid() {
@@ -122,13 +124,21 @@ public class Uusers {
 		this.ulogintimes = ulogintimes;
 	}
 
+	public String getUremarks() {
+		return uremarks;
+	}
+
+	public void setUremarks(String uremarks) {
+		this.uremarks = uremarks;
+	}
+
 	@Override
 	public String toString() {
 		return "Uusers [u_uid=" + u_uid + ", uloginname=" + uloginname
 				+ ", uname=" + uname + ", upwd=" + upwd + ", udept=" + udept
 				+ ", udept2=" + udept2 + ", uoffice=" + uoffice + ", uphoneno="
 				+ uphoneno + ", uvphone=" + uvphone + ", uauthority="
-				+ uauthority + ", ulogintimes=" + ulogintimes + "]";
+				+ uauthority + ", ulogintimes=" + ulogintimes + ", uremarks="
+				+ uremarks + "]";
 	}
-
 }

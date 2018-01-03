@@ -60,28 +60,28 @@
 				
 			</tr>
 			<tr>
-				<td colspan="2" style="color: #888">↓</td>
+				<td colspan="2">↓</td>
 		
 			</tr>
 			<tr>
-				<td style="color: #888">中心批准<br>(无中心由部门批准如：财务部)</td>
-				<td style="color: #888">中心批准</td>
+				<td>中心批准<br>(无中心由部门批准如：财务部)</td>
+				<td>中心批准</td>
 			</tr>
 			<tr>
 				<td>↓</td>
-				<td style="color: #888">↓</td>
+				<td>↓</td>
 			</tr>
 			<tr>
 				<td>派车批准</td>
-				<td style="color: #888">部门批准</td>
+				<td >部门批准</td>
 			</tr>
 			<tr>
-				<td rowspan="4" style="color: #555">（需要部门及以上领导批准的自行告知
+				<td rowspan="4" >（需要部门及以上领导批准的自行告知
 					对应领导或派车人员。）</td>
-				<td style="color: #888">↓</td>
+				<td>↓</td>
 			</tr>
 			<tr>
-				<td style="color: #888">行政事务<br>批准</td>
+				<td>行政事务<br>批准</td>
 			</tr>
 			<tr>
 				<td>↓</td>

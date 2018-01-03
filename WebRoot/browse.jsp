@@ -8,8 +8,8 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+	+ request.getServerName() + ":" + request.getServerPort()
+	+ path + "/";
 	
 	List<userview> applist  = new ArrayList<userview>();
 %>
@@ -31,10 +31,11 @@
 
 </head>
 <body>
-	
+	<button onclick="show_xuzhi(1)"
+		style="display: block; position: absolute; top: 100px; left: 50px">使用需知</button>
 	<div id="ccenter" align="center">
 		<div style="width: 1100px;">
-			<%@ include file="usertop.jsp"%>
+			<br><%@ include file="usertop.jsp"%>
 			<div class="menu_nav">
 				<ul>
 					<li id="userapp2"><a href="javascript:void(0)">申请派车</a></li>
@@ -46,12 +47,12 @@
 			</div>
 			<%
 				if (curuser != null) {
-					String usql = "select * from (select * from userapp "
-							+ "where appdept = ? order by appid desc ) where ROWNUM <= 50";
-					applist = userDAO.getForList(userview.class, usql,
-							curuser.getUdept());
-					session.setAttribute("applist", applist);
-				}
+															String usql = "select * from (select * from userapp "
+																	+ "where appdept = ? order by appid desc ) where ROWNUM <= 50";
+															applist = userDAO.getForList(userview.class, usql,
+																	curuser.getUdept());
+															session.setAttribute("applist", applist);
+														}
 			%>
 			<table class="browse_tabheader" border="1">
 				<tr>
@@ -116,7 +117,8 @@
 									<c:when test='${item.acondition eq "0"}'>
 										<marquee>等待领导同意</marquee>
 									</c:when>
-								</c:choose></td><td class="td7">${item.acondition}</td>
+								</c:choose></td>
+							<td class="td7">${item.acondition}</td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -128,11 +130,42 @@
 			</div>
 			<div
 				style="font-size: 12px; font-family: Arial; margin-top: 30px; width: 480px;">
-				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;XDa
+				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;X.Da
 			</div>
 		</div>
 	</div>
 </body>
 <script type="text/javascript" src="js/browse.js"></script>
 <script type="text/javascript" src="js/menu_nav.js"></script>
+<script>
+	$(function() {
+		var uremarks = "${user.uremarks}";
+
+		if (uremarks == "0") {
+			show_xuzhi();
+		}
+
+	});
+	function show_xuzhi(arg) {
+
+		$.getScript("zDrag.js", function() {
+			$.getScript("zDialog.js", function() {
+				var diag = new Dialog();
+				diag.Width = 540;
+				diag.Height = 400;
+				diag.URL = "/TLCAR/xuzhi.html";
+				if (arg == undefined) {
+					alert("您在更新版本后首次登陆，\r\n请仔细阅读使用需知。\n\n1分钟后自动关闭。");
+					diag.AutoClose = 60;
+					diag.ShowCloseButton = false;
+				}else{
+					diag.OKEvent = function() {
+						diag.close();
+					};
+				}
+				diag.show();
+			});
+		});
+	}
+</script>
 </html>

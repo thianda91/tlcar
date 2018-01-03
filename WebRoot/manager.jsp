@@ -270,7 +270,7 @@
 			</div>
 			<div
 				style="font-size: 12px; font-family: Arial; margin-top: 30px; width: 480px;">
-				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;XDa
+				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;X.Da
 			</div>
 		</div>
 	</div>

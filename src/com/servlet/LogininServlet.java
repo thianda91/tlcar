@@ -73,6 +73,11 @@ public class LogininServlet extends HttpServlet {
 			userDAO.update(loginsql, new Date().toLocaleString(), user, pwd,
 					RemoteAddr, "登陆");
 			System.out.print(loginlog);
+			if(curuser.getUremarks().equalsIgnoreCase("0")){
+				String updatesql = "update uusers set uremarks = ? where u_uid = ?";
+				userDAO.update(updatesql, "已阅需知",
+						curuser.getU_uid());
+			}
 			/*
 			 * 更新登陆次数
 			 */

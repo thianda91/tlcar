@@ -217,6 +217,7 @@
 							var time = $("#time").text();
 							$("#depoption2")
 									.val("同意。 " + datestr + time + name);
+							var depoption2 = $("#depoption2").val();
 							$("#depoption2").attr("disabled", "true");
 							// var depoption2 = $("#depoption2").val();
 							// 执行 update 数据

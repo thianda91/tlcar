@@ -35,7 +35,7 @@
 		<div class="title-bg clearfix">
 			<div class="logoo"></div>
 			<div class="titlee">
-				tlydgs派车系统 <a id="showversion" href="javascript:void(0)"><big>V</big>1.88<span>更新历史</span>
+				tlydgs派车系统 <a id="showversion" href="javascript:void(0)"><big>V</big>1.90s<span>更新历史</span>
 				</a>
 			</div>
 		</div>
@@ -50,8 +50,7 @@
 					<tr class="input">
 						<th>用户：</th>
 						<td><input type="text" id="user" name="user"
-							class="logininnput" maxlength=20>
-						</td>
+							class="logininnput" maxlength=20></td>
 					</tr>
 					<tr style="width: 320px;">
 						<td></td>
@@ -65,15 +64,15 @@
 						<td><input type="password" id="pwd" name="pwd"
 							class="logininnput" style="ime-mode:disabled" maxlength=32
 							onmousemove="c$.mmove(this,'用户名为姓名的拼音或者姓名的汉字，初始密码均为Qq_0247asdf，登录后可修改。')"
-							onmouseout="c$.mout();">
-						</td>
+							onmouseout="c$.mout();"></td>
 					</tr>
 					<tr>
 						<td colspan="2"><span class='ifcookiepwd'><input
 								id="ifcookiepwd" type="checkbox">记住密码</span><span class="tem"><a
 								id="xuzhi" href="javascript:void(0)"
 								onmousemove="c$.mmove(this,'遇到问题？请咨询 610671')"
-								onmouseout="c$.mout();">使用需知</a> </span></td>
+								onmouseout="c$.mout();">使用需知</a> </span>
+						</td>
 					</tr>
 					<%
 						String tips = (String) session.getAttribute("msg");
@@ -85,7 +84,8 @@
 					<tr>
 						<td colspan="2"><div id="tips">
 								&nbsp;<%=tips%>
-							</div></td>
+							</div>
+						</td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><span class="outbg"> <input
@@ -97,8 +97,7 @@
 								value="登录" class="login-btnhover"
 								onmouseover="this.className='login-btn'"
 								onmouseout="this.className='login-btnhover'"
-								onmousedown="this.className='login-btnhover'"> </span>
-						</td>
+								onmousedown="this.className='login-btnhover'"> </span></td>
 					</tr>
 					<!--  -->
 				</table>
@@ -123,25 +122,28 @@
 		</div>
 	</div>
 	<div id="strongpwd"
-		style="display:none; font-size:14px; color:#03f; text-align: left; padding: 10px 30px;">
-		<h3>根据省公司“撞库攻击”风险防控整改要求，已对派车系统进行安全加固。</h3>
+		style="display:none; font-size:12px; color:#666; text-align: left; padding: 10px 30px;">
+		<h3 style="color:red">根据省公司“撞库攻击”风险防控整改要求，已对派车系统进行安全加固。</h3>
 		<p>本次安全加固,系统升级为V1.88，版本历史可点击页面上方更新历史查看，具体措施包括：</p>
 		<p>
-			1.密码长度最小8字符<br>
-			2.密码组合要求：必须是字母大写，字母小写，数字，特殊字符中任意三个组合<br>
-			3.首次登陆必须修改密码<br>
-			4.密码采用md5加密传输，服务器保存的是md5加密后的密码，非明文。<br>
+			1.验证密码长度最小8字符<br> 2.密码组合要求：必须是字母大写，字母小写，数字，特殊字符中任意三个组合<br>
+			3.首次登陆必须修改密码<br> 4.密码采用md5加密传输，服务器保存的是md5加密后的密码，非明文。<br>
+			5.记录操作日志信息到数据库，永久可查阅。（目前仅记录登录日志）
 		</p>
-		<p style="font-size:12px;color:#666;">
-			忘记密码可以进行重置，方法如下：由派车人（初少军）登陆后进入【系统管理】，找到对应用户后【单击查看】用户信息，点击【密码重置】即可恢复为原始密码。<br><br>
-			现在的初始密码为 <span style="color: #000; font-size: 14px; font-weight: 700;">Qq_0247asdf</span>，请在登陆后立即修改。
+		<p style="font-size:14px;font-weight:700;color:#03f;">
+			忘记密码可以进行重置，方法如下：由派车人（初少军）登陆后进入【系统管理】，找到对应用户后【单击查看】用户信息，点击【密码重置】即可恢复为原始密码。
 		</p>
-		<p style="text-align: right;">XDa<br>2016-8-8</p>
-		<p style="text-align: center;">	
-			<span>
-				<span><input id="strongpwd_read" type="checkbox">&nbsp;不再显示</span><br>
-				<span style="color:#000;font-size:12px;">点击忘记密码可再次显示</span>
-			</span>
+		<p>
+			现在的初始密码为 <span
+				style="color: #000; font-size: 14px; font-weight: 700;">Qq_0247asdf</span>，请在登陆后立即修改。
+			相关阅读：<a href="javascript:document.getElementById('xuzhi').click()">使用须知</a>
+		</p>
+		<p style="text-align: right;">
+			XDa<br>2016-8-8
+		</p>
+		<p style="text-align: center;">
+			<span> <span><input id="strongpwd_read" type="checkbox">&nbsp;不再显示</span><br>
+				<span style="color:#000;font-size:12px;">点击忘记密码可再次显示</span> </span>
 		</p>
 	</div>
 </body>
@@ -149,9 +151,9 @@
 <script type="text/javascript">
 	{
 		$(function($) {//自动弹出密码强度提示
-			if (getCookies("tlcar_strongpwd") == "read")
+			if (getCookies("tlcar_strongpwd2") == "read") {
 				$("#strongpwd_read").attr("checked", "checked");
-			else
+			} else
 				$(".forget-pwd").click();
 		});
 
@@ -173,6 +175,8 @@
 			$.getScript("zDrag.js", function() {
 				$.getScript("zDialog.js", function() {
 					var diag = new Dialog();
+					diag.AutoClose = 60;
+					diag.ShowCloseButton = false;
 					diag.Width = 540;
 					diag.Height = 400;
 					diag.URL = "/TLCAR/xuzhi.html";
@@ -209,11 +213,16 @@
 					diag.InvokeElementId = "strongpwd";
 					diag.OKEvent = function() {
 						if ($("#strongpwd_read").is(":checked"))
-							setCookies("tlcar_strongpwd", "read", 30);
+							setCookies("tlcar_strongpwd2", "read", 30);
 						else
-							setCookies("tlcar_strongpwd", "", -1);
+							setCookies("tlcar_strongpwd2", "", -1);
 						diag.close();
+						document.getElementById('xuzhi').click();
 					};
+					diag.CancelEvent = function() {
+						document.getElementById('xuzhi').click();
+					};
+
 					diag.show();
 				});
 			});

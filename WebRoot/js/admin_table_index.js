@@ -1,7 +1,7 @@
 /**
  * Used in /admin/table_index.jsp
  * 
- * @author Xianda
+ * @author XDa
  * 
  */
 

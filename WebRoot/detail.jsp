@@ -272,7 +272,7 @@ table.detailtab td input,textarea {
 			<!-- handle_result DIV 被用为执行处理派车单命令 ↑↑-->
 			<div class="noprint"
 				style="font-size: 12px; font-family: Arial; margin-top: 50px; width: 480px;">
-				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;XDa
+				版权所有&nbsp;&copy;&nbsp;2015-<span id="thisyear"></span>&nbsp;X.Da
 			</div>
 		</div>
 	</div>

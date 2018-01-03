@@ -19,7 +19,7 @@ public class userDAO extends DAO {
 	/**
 	 * 用户登录验证用户名密码，返回用户信息。 （通过姓名登录）
 	 * 
-	 * @author XDa
+	 * @author 
 	 * @param uname
 	 *            : 姓名
 	 * @param pwd
