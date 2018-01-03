@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #C7EDCC;
+}
+
+.mtips {
+	font-size: 12px;;
+	color: maroon;
+}
+
+.mnav {
+	margin-top: 30px;
+}
+
+.titlediv1 {
+	width: 450px;
+}
+
+.titlediv2 {
+	width: 850px;
+}
+
+#cardiv,#dridiv {
+	height: 400px;
+	width: 450px;
+	overflow-y: scroll;
+}
+
+#userdiv {
+	height: 400px;
+	width: 850px;
+	overflow-y: scroll;
+	height: 400px;
+}
+
+table.mnav th {
+	border: thin;
+	font-size: 15px;
+}
+
+table.mnav {
+	cursor: default;
+}
+
+table.mview {
+	cursor: pointer;
+}
+
+.titlediv1,.titlediv2 {
+	padding-right: 15px;
+}
+
+table.mview {
+	background-color: #eee;
+}
+
+th,td,#userdiv .mtd1 {
+	padding: 0px 5px;
+	border: none;
+	text-align: center;
+	font-family: "宋体";
+}
+
+#dridiv .mtd4,#userdiv td {
+	text-align: left;
+}
+
+.mtd1 {
+	width: 40px;
+}
+
+.mtd1 a,.mtd1 a:VISITED {
+	font-family: Times New Roman;
+}
+
+.mtd2 {
+	width: 100px;
+}
+
+.mtd3 {
+	width: 180px;
+}
+
+.mtd4 {
+	width: 75px;
+}
+
+.mtd5 {
+	width: 150px;
+}

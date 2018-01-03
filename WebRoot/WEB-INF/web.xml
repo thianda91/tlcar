@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<error-page>
+		<error-code>503</error-code>
+		<location>/WEB-INF/err503.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/err404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/err500.html</location>
+	</error-page>
+	<servlet>
+		<servlet-name>LogininServlet</servlet-name>
+		<servlet-class>com.servlet.LogininServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HandleServlet</servlet-name>
+		<servlet-class>com.servlet.HandleServlet</servlet-class>
+	</servlet>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet-mapping>
+		<servlet-name>LogininServlet</servlet-name>
+		<url-pattern>/Welcome</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HandleServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>5</session-timeout>
+	</session-config>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>com.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<context-param>
+		<param-name>encoding</param-name>
+		<param-value>UTF-8</param-value>
+	</context-param>
+	<!-- <filter> <filter-name>CarNo_DriNameFilter</filter-name> <filter-class>com.filter.PowerFilter</filter-class> 
+		</filter> <filter-mapping> <filter-name>CarNo_DriNameFilter</filter-name> 
+		<url-pattern>/detail.jsp</url-pattern> </filter-mapping> -->
+	<listener>
+		<listener-class>com.filter.OnlineCounterListener</listener-class>
+	</listener>
+
+</web-app>

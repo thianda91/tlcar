@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function load_js_mac() {
+		/*$.get("js-ip-mac.html", function(data) {
+			document.write(data);
+		});*/
+		$("#ip_mac_dnsname").load("js-ip-mac.html");
+		$("#ip_info").show();
+		$("#ip_info_link").text("返回").css("color","#e55");
+		$("#ip_info_link").attr("href", "/TLCAR");
+		setTimeout("location.href='/TLCAR'", 60000);
+
+	}
+
+	function new_load_js_mac() {
+		$.getScript("zDrag.js", function() {
+			$.getScript("zDialog.js", function() {
+				var diag = new Dialog();
+				diag.Width = 300;
+				diag.Height = 120;
+				diag.URL = "/TLCAR/showIP_MAC_HOSTNAME.jsp";
+				diag.OKEvent = function() {
+					diag.close();
+				};
+				diag.show();
+			});
+		});
+	}
+</script>
+<style>
+.nav {
+	font-family: "宋体";
+	position: absolute;
+	width: 340px;
+	margin: 0px;
+	padding: 20px;
+	top: 35px;
+	left: 20px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,
+		endColorstr=#7F000000 );
+}
+
+.nav ul {
+	margin: 5px;
+	padding: 5px;
+}
+
+.nav ul li{
+	padding : 3px;
+}
+
+.nav ul li a {
+	color: #ccc;
+	font-family: "宋体";
+}
+
+.nav ul li.seeinfo_li {
+	font-size: 12px;
+}
+
+.nav ul li.seeinfo_li a {
+	color: #00cf64;
+}
+
+.nav .info {
+	margin: 5px;
+	padding: 0 25px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #00cf64;
+}
+
+.lead {
+	font-weight: 700;
+}
+</style>
+</head>
+<body>
+	<span>&nbsp;<i>&#xf003e;</i> </span>
+	<ul>
+		<li class="lead" onmousemove="c$.mmove(this,'Shared Files');"
+			onmouseout="c$.mout();">&#xf0064;<a
+			href='/share'>Shared Files</a>
+		</li>
+		<li onmousemove="c$.mmove(this,'attachments');"
+			onmouseout="c$.mout();">&#xf0064;<a
+			href='/attachments'>附件文件</a>
+		</li>
+		<li class="lead" onmousemove="c$.mmove(this,'tlyd通讯录');"
+			onmouseout="c$.mout();">&#xf0064;<a href='txl_static.html'>tlyd通讯录</a>
+		</li>
+		<li class="seeinfo_li" onmousemove="c$.mmove(this,'查看本机IP等信息');"
+			onmouseout="c$.mout();">&#xf0064;IP、主机名、MAC查看：<a
+			id="ip_info_link" href='javascript:load_js_mac()'>方法1</a>&nbsp;<a
+			href="javascript:new_load_js_mac()">方法2</a></li>
+	</ul>
+	<div id="ip_info" class="info" style="display: none;">
+		<table>
+			<tr>
+				<td>IP：</td>
+				<td id="txtIPAddr" name="txtIPAddr"></td>
+			</tr>
+			<tr>
+				<td>MAC：</td>
+				<td id="txtMACAddr" name="txtMACAddr"></td>
+			</tr>
+			<tr>
+				<td>计算机名：</td>
+				<td id="txtDNSName" name="txtDNSName"></td>
+			</tr>
+		</table>
+	</div>
+	<div id="ip_mac_dnsname" style="display: none;"></div>
+</body>
+</html>

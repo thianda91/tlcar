@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+body div div form {
+	width: 700px;
+	background-color: #eaeaea;
+}
+
+table.apptab td {
+	
+}
+
+table.detailtab td {
+	text-align: left;
+	font-size: 12px;
+}
+
+form table td {
+	padding: 5px;
+	color: #000;
+}
+
+form table.apptab td input,form table.detailtab td input,form table textarea
+	{
+	font-size: 18px;
+}
+
+table.detailtab textarea {
+	padding: 0px 5px;
+}
+
+table td input {
+	padding: 0px 5px;
+	width: 200px;
+}
+
+textarea,input {
+	font-family: "宋体";
+	overflow: hidden;
+}
+
+table td select,table td input {
+	height: 22px;
+	line-height: 22px;
+}
+
+
+
+form table tr.tab_th th {
+	color: blue;
+}
+
+form table.apptab tr.tab_th th h2 {
+	padding-top: 15px;
+}
+
+table tr td.err,#response1,#response2,#response3 {
+	color: red;
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+#appdept {
+	float: left;
+}
+
+#reason {
+	float: left;
+}
+
+td select {
+	margin: 0px 0px;
+}
+
+#handle_result {
+	display: none;
+	position: relative;
+	top: -300px;
+	left: 0px;
+	width: 400px;
+	height: 100px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8ffffff,
+		endColorstr=#c8ffffff );
+	/*0.3:4c-----0.5:7f------0.8:c8*/
+}
+
+#xx {
+	float: right;
+	width: 18px;
+	background-color: Red;
+	color: #fff;
+}

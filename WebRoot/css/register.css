@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #C7EDCC;
+	
+}
+
+.header {
+	height: 90px;
+	background: url(../index_files/logo.jpg) repeat-x left top;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	-moz-border-radius-topright: 12px;
+	-webkit-border-top-left-radius: 12px;
+	-webkit-border-top-right-radius: 12px;
+}
+
+.logo {
+	margin: 0;
+	width: 750px;
+}
+
+.title {
+	font-family: "微软雅黑", "宋体", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	padding-top: 15px;
+}
+
+.hello { /*欢迎语*/
+	float: right;
+	font-size: 14px;
+}
+
+div form table {
+	background-color: #f0f0f0;
+}
+
+div form table tr th { /* 第一列 */
+	font-weight: normal;
+	font-size: 12px;
+	text-align: right;
+	font-family: Tahoma;
+	width: 460px;
+	border: 0px;
+}
+
+div form table tr th span {
+	color: red;
+	padding: 0px 2px;
+}
+
+div form table tr td {
+	border: 0px;
+}
+div form table tr td input {
+	font-size: 12px;
+}
+div form table tr td[class='tips'] {
+	width: 460px;
+}
+
+div form table tr td input,div form table tr td select {
+	width: 160px;
+	color: blue;
+}
+
+.err {
+	font-size: 12px;
+	color: green;
+	font-family: "宋体";
+	padding-left: 10px;
+}
+
+.tips {
+	font-size: 12px;
+	color: #ff7f00;
+	float: left;
+}
+
+#inputsubmit {
+	cursor: pointer;
+	border: none;
+	color: #fff;
+	background-color: #ff7f00;
+	width: 100px;
+	height: 25px;
+	border: none;
+}
+}

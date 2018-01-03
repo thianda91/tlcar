@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dynarch Calendar -- Single calendar for multiple fields</title>
+	<script src="js/jscal2.js"></script>
+	<script src="js/en.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jscal2.css">
+		<link rel="stylesheet" type="text/css" href="css/border-radius.css">
+			<link rel="stylesheet" type="text/css" href="css/steel.css">
+</head>
+<body marginwidth="0" marginheight="0">
+	<p>To save memory, you can use a single (popup) calendar object to
+		manage multiple input fields. The following sample shows you how to do
+		it.</p>
+
+	<input size="30" id="f_date1"><button id="f_btn1" type="button">...</button>
+		<br> 
+	<input size="30" id="f_date2"><button id="f_btn2" type="button">...</button> 
+					<br> 
+	<input size="30" id="f_date3"><button id="f_btn3" type="button">...</button> 
+							<br> 
+	<input size="30" id="f_date4"><button id="f_btn4" type="button">...</button>
+								<script type="text/javascript">
+									//         
+
+									var cal = Calendar.setup({
+										onSelect : function(cal) {
+											cal.hide()
+										},
+										showTime : true
+									});
+									cal.manageFields("f_btn1", "f_date1",
+											"%Y-%m-%d %I:%M %p");
+									cal.manageFields("f_btn2", "f_date2",
+											"%b %e, %Y %I:%M %p");
+									cal.manageFields("f_btn3", "f_date3",
+											"%e %B %Y %I:%M %p");
+									cal.manageFields("f_btn4", "f_date4",
+											"%A, %e %B, %Y %I:%M %p");
+
+									//
+								</script>
+</body>
+</html>

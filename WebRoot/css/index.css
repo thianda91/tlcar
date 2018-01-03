@@ -1,0 +1,224 @@
+@CHARSET "UTF-8";
+
+body {
+	overflow: hidden;
+	background-color: #C7EDCC;
+}
+
+ul li {
+	list-style: none;
+}
+
+.logoo {
+	WIDTH: 170px;
+	BACKGROUND: url(../index_files/logo.png) no-repeat;
+	FLOAT: left;
+	HEIGHT: 85px;
+}
+
+.titlee {
+	MARGIN: 20px 0px 0px 20px;
+	FONT-FAMILY: "微软雅黑", "宋体", sans-serif;
+	FLOAT: left;
+	COLOR: #088bff;
+	FONT-SIZE: 22px;
+	FONT-WEIGHT: normal;
+}
+
+#showversion {
+	COLOR: #000;
+	TEXT-DECORATION: none;
+	FONT-SIZE: 12px;
+}
+
+#showversion span {
+	FONT-SIZE: 12px;
+	font-weight: bold;
+	TEXT-DECORATION: underline;
+	COLOR: #088bff;
+}
+
+.title-bg {
+	POSITION: relative;
+	MARGIN: 0px auto;
+	WIDTH: 1000px;
+	HEIGHT: 85px;
+}
+
+.link-center-con {
+	POSITION: relative;
+	MARGIN: 0px auto;
+	WIDTH: 1000px;
+	BACKGROUND: url(../index_files/login_main_1.88.jpg) no-repeat;
+	HEIGHT: 430px;
+}
+
+.renzheng { /*派车系统登录平台*/
+	FONT-FAMILY: "微软雅黑", "宋体", sans-serif;
+	font-size: 18px;
+	text-indent: 30px;
+	color: #088bff;
+	color: #03f;
+	text-align: left;
+	height: 50px;
+	font-weight: bold;
+}
+
+#tab1_bak {
+	BACKGROUND: url(../index_files/login_box.png) no-repeat;
+	/*background-color: rgba(0, 0, 0, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,
+		endColorstr=#7fffffff );0.3:4c-----0.5:7f------0.8:c8*/
+	POSITION: absolute;
+	TOP: 54px;
+	RIGHT: 100px;
+	WIDTH: 320px;
+	HEIGHT: 300px;
+}
+
+#tab1 {
+	/*BACKGROUND: url(../index_files/login_box.png) no-repeat;*/
+	background-color: rgba(255, 255, 255, 0.3);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff,
+		endColorstr=#c7ffffff ); /*0.3:4c-----0.5:7f------0.8:c8*/
+	POSITION: absolute;
+	TOP: 54px;
+	RIGHT: 100px;
+	WIDTH: 320px;
+	HEIGHT: 300px;
+}
+
+#tab1 th {
+	text-indent: 10px;
+}
+
+#time {
+	POSITION: absolute;
+	TOP: 85px;
+	RIGHT: 120px;
+	color: #000;
+	FONT-FAMILY: "宋体";
+}
+
+.logininnput {
+	PADDING-LEFT: 10px;
+	WIDTH: 220px;
+	HEIGHT: 37px;
+	LINE-HEIGHT: 37px;
+	/*COLOR: lime;*/
+	font-size: 18px;
+	font-weight:700;
+	/*background-color: transparent;*/
+}
+
+.tem a{ /*临时提示语*/ /*使用须知*/
+	padding: 0 25px;
+	font-size: 14px;
+	color: #e55;
+}
+
+.forget-pwd {
+	float: right;
+	padding: 0px 10px;
+	font-size: 12px;
+	color: #333;
+	FONT-FAMILY: "微软雅黑", "宋体", sans-serif;
+}
+
+.ifcookiepwd {
+	float: left;
+	text-indent: 50px;
+	color: #000;
+	font-size: 12px;
+	/*visibility: hidden;*/
+}
+
+#tips { /*	POSITION: absolute;
+	TOP: 285px;
+	RIGHT: 120px;
+	width: 270px;*/
+	text-align: center;
+	color: red;
+	font-size: 12px;
+	/*visibility: hidden;*/
+}
+
+.login-btn { /*重置按钮*/
+	border: none;
+	WIDTH: 122px;
+	height: 34px;
+	FONT-FAMILY: "微软雅黑", "宋体", sans-serif;
+	COLOR: #3388ff;
+	/*color: #000;*/
+	background-color: #fff; /*白色*/
+	FONT-SIZE: 18px;
+	font-weight:700;
+}
+
+.login-btnhover { /*提交按钮*/
+	border: none;
+	WIDTH: 122px;
+	FONT-FAMILY: "微软雅黑", "宋体", sans-serif;
+	HEIGHT: 34px;
+	color: #fff;
+	/*COLOR: #3388ff;*/
+	background-color: #3388ff;
+	FONT-SIZE: 18px;
+	font-weight:700;
+}
+
+span.outbg_1111{ /*包含重置、提交按钮外的span*/
+	/*未使用*/
+	width: 122px;
+	height: 34px;
+	background-color: rgba(0, 0, 0, 0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,
+		endColorstr=#00000000 );
+}
+
+.outbg input {
+	border: 1px #ccc solid;
+}
+
+A {
+	TEXT-DECORATION: none;
+}
+
+A:hover {
+	TEXT-DECORATION: underline;
+}
+
+.gotoregisterbg {
+	cursor: pointer;
+	display: block;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	left: 160px;
+	top: 380px;
+	color: #0f0;
+	overflow: hidden;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,
+		endColorstr=#7F000000 ); /*0.3:4c-----0.5:7f------0.8:c8*/
+}
+
+#firefox_tip {
+	display: none;
+	position: absolute;
+	TOP: 54px;
+	RIGHT: 100px;
+	WIDTH: 320px;
+	HEIGHT: 300px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+	font-weight: bold;
+	background: rgba(199, 237, 204, 0.7);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FC7EDCC,
+		endColorstr=#7FC7EDCC );
+	z-index: 2;
+	cursor: default;
+}
